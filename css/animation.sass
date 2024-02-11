@@ -1,0 +1,55 @@
+// animation styles
+$lh: 36px
+
+h1,
+.h1__line
+    margin: 0
+    font-size: 32px
+    font-weight: bold
+    line-height: $lh
+
+h1
+    transform: scale(1)
+
+    .do-anim &
+        transform: scale(0)
+
+.h1
+    &__anim
+        position: relative
+
+    &__line
+        position: absolute
+        opacity: 0
+        inset: 0
+
+        .do-anim &
+            opacity: 1
+        span
+            display: block
+            transition: transform 600ms ease-out
+
+            .do-anim &
+                transform: translateY(0)
+
+        &-1
+            clip-path: inset(0 0 calc(100% - $lh) 0)
+
+            span
+                transform: translateY($lh)
+
+        &-2
+            clip-path: inset($lh 0 calc(100% - $lh - $lh) 0)
+
+            span
+                transform: translateY($lh)
+                transition-delay: 200ms
+                clip-path: inset($lh 0 0 0)
+
+        &-3
+            clip-path: inset($lh * 2 0 0 0)
+
+            span
+                transform: translateY($lh)
+                transition-delay: 400ms
+                clip-path: inset($lh * 2 0 0 0)

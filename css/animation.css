@@ -1,0 +1,60 @@
+h1,
+.h1__line {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+h1 {
+  transform: scale(1);
+}
+.do-anim h1 {
+  transform: scale(0);
+}
+
+.h1__anim {
+  position: relative;
+}
+.h1__line {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+}
+.do-anim .h1__line {
+  opacity: 1;
+}
+.h1__line span {
+  display: block;
+  transition: transform 600ms ease-out;
+}
+.do-anim .h1__line span {
+  transform: translateY(0);
+}
+.h1__line-1 {
+  -webkit-clip-path: inset(0 0 calc(100% - 36px) 0);
+          clip-path: inset(0 0 calc(100% - 36px) 0);
+}
+.h1__line-1 span {
+  transform: translateY(36px);
+}
+.h1__line-2 {
+  -webkit-clip-path: inset(36px 0 calc(100% - 36px - 36px) 0);
+          clip-path: inset(36px 0 calc(100% - 36px - 36px) 0);
+}
+.h1__line-2 span {
+  transform: translateY(36px);
+  transition-delay: 200ms;
+  -webkit-clip-path: inset(36px 0 0 0);
+          clip-path: inset(36px 0 0 0);
+}
+.h1__line-3 {
+  -webkit-clip-path: inset(72px 0 0 0);
+          clip-path: inset(72px 0 0 0);
+}
+.h1__line-3 span {
+  transform: translateY(36px);
+  transition-delay: 400ms;
+  -webkit-clip-path: inset(72px 0 0 0);
+          clip-path: inset(72px 0 0 0);
+}/*# sourceMappingURL=animation.css.map */
