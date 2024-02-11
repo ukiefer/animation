@@ -16,7 +16,7 @@ body {
 header {
   width: 100%;
   height: var(--header-height);
-  position: fixed;
+  position: relative;
   top: 0;
   font-family: sans-serif;
   background-color: rgba(0, 200, 150, 0.8);
@@ -36,3 +36,8 @@ main {
   font-size: 1.6rem;
   font-family: sans-serif;
 }
+
+h1 em, .h1__line em {
+  font-style: normal;
+  color: rgba(0, 200, 150, 0.8);
+}/*# sourceMappingURL=main.css.map */
